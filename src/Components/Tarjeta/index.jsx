@@ -7,8 +7,8 @@ const Tarjeta = ({categoria, imagen, titulo, producto, precio}) => {
                 <div className="absolute top-0 right-0 justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1">+</div>
             </figure>
             <p className="flex justify-between">
-                <span className="text-base text-center font-light m-1 p-1">{producto}</span>
-                <span className="text-lg font-medium m-1 p-1">{precio}</span>
+                <span className="text-sm text-start font-normal p-1">{producto}</span>
+                <span className="text-base text-start font-medium m-1 p-1">{precio}</span>
             </p>
         </div>
 
