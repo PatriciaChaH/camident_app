@@ -1,4 +1,5 @@
 //import {useState, useEffect} from 'react';
+import DetalleProducto from "../../Components/DetalleProducto";
 import Layout from "../../Components/Layout";
 import Tarjeta from "../../Components/Tarjeta";
 
@@ -14,16 +15,17 @@ export default function Productos() {
     return (
       <Layout>
         Productos
-        <div className="flex justify-between">
-        <Tarjeta categoria = 'Materiales' imagen = 'src/assets/Photos/resina.png' titulo = 'Resina' 
-          producto = 'Resina' precio = 'COP 82.000'/>
-        <Tarjeta categoria = 'Equipos' imagen = 'src/assets/Photos/resina.png' titulo = 'Lámpara' 
-          producto = 'Pieza de mano' precio = 'COP 520.000'/>
-        <Tarjeta categoria = 'Instrumental' imagen = 'src/assets/Photos/resina.png' titulo = 'Lámpara' 
-          producto = 'Pieza de mano' precio = 'COP 520.000'/>
-        <Tarjeta categoria = 'Unidades' imagen = 'src/assets/Photos/resina.png' titulo = 'Lámpara' 
-          producto = 'Pieza de mano' precio = 'COP 520.000'/>
+        <div className="flex justify-around">
+          <Tarjeta categoria = 'Materiales' imagen = 'src/assets/Photos/resina.png' titulo = 'Resina' 
+            producto = 'Resina' precio = 'COP 82.000'/> 
+          <Tarjeta categoria = 'Equipos' imagen = 'src/assets/Photos/resina.png' titulo = 'Lámpara' 
+            producto = 'Pieza de mano' precio = 'COP 520.000'/>
+          <Tarjeta categoria = 'Instrumental' imagen = 'src/assets/Photos/resina.png' titulo = 'Lámpara' 
+            producto = 'Pieza de mano' precio = 'COP 520.000'/>
+          <Tarjeta categoria = 'Unidades' imagen = 'src/assets/Photos/resina.png' titulo = 'Lámpara' 
+            producto = 'Lámpara de fotocurado' precio = 'COP 520.000'/>
         </div>
+        <DetalleProducto/>      
         
        
       </Layout>

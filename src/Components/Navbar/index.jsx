@@ -1,7 +1,11 @@
+import { useContext } from 'react'
 import {NavLink} from 'react-router-dom'
+import { ShoppingCartContext } from '../../Context'
 
 const Navbar =() => {
+    const context = useContext(ShoppingCartContext)
     const activeStyle = 'underline underline-offdet-4'
+    
 
     return(
         <nav className='flex-column items-center bg-stone-50 p-2 '>
@@ -23,7 +27,7 @@ const Navbar =() => {
                 </li>
                 <li>
                    <NavLink
-                        to ='/Productos'
+                        to ='/productos'
                         className={({isActive}) =>
                             isActive ? activeStyle:undefined                        
                         }>
@@ -32,7 +36,7 @@ const Navbar =() => {
                 </li>
                 <li>
                    <NavLink
-                        to ='/Acerca'
+                        to ='/acerca-de'
                         className={({isActive}) =>
                             isActive ? activeStyle:undefined                        
                         }>
@@ -41,11 +45,20 @@ const Navbar =() => {
                 </li>
                 <li>
                    <NavLink
-                        to ='/Contacto'
+                        to ='/contacto'
                         className={({isActive}) =>
                             isActive ? activeStyle:undefined                        
                         }>
                         Contáctanos
+                    </NavLink>
+                </li>
+                <li>
+                   <NavLink
+                        to ='/carrito'
+                        className={({isActive}) =>
+                            isActive ? activeStyle:undefined                        
+                        }>
+                        🛒{context.count}
                     </NavLink>
                 </li>
 
